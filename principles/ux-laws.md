@@ -76,7 +76,7 @@ People remember the most intense moment and how an experience ends.
 
 ## More laws and principles
 
-Postel's law, Frequency of use, Labor illusion, Brushing and linking, Origin-aware, Layout stability and the password-flow principles are defined in `design-principles-cheatsheet`. The extended set (Parkinson, Pareto, Zeigarnik, goal gradient, Occam, Prägnanz and more) with exact rules is in `charles/ux-animation/SKILL.md`.
+Postel's law, Frequency of use, Labor illusion, Brushing and linking, Origin-aware, Layout stability and the password-flow principles are defined in `design-principles-cheatsheet`. The extended set (Parkinson, Pareto, Zeigarnik, goal gradient, Occam, Prägnanz and more) with exact rules is in `procedures/ux-animation/PROCEDURE.md`.
 
 ## Quick diagnosis table
 

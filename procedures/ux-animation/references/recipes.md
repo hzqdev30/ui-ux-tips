@@ -2,7 +2,7 @@
 
 Sections: [the curves](#the-curves) · [exit timing in CSS](#exit-timing-in-css) · [modal](#modal) · [drawer and sheet](#drawer-and-sheet) · [popover and dropdown](#popover-and-dropdown) · [tooltip](#tooltip) · [toast](#toast) · [entrances](#entrances-split-then-stagger) · [exits](#exits) · [expanders](#expanders) · [icon swaps](#icon-swaps) · [async buttons](#async-buttons) · [press](#press) · [numbers](#numbers) · [sliders](#sliders) · [carousels](#carousels) · [theme switch](#theme-switch)
 
-Exact values for common components. They follow SKILL.md: ease-out to appear, ease-in to leave, exits 20–30% shorter than entrances, and only `transform`, `opacity` and blurs under 20px animate (plus `grid-template-rows` for an expander). Every one is off under reduced motion. Keep the values and write them in the project's stack.
+Exact values for common components. They follow PROCEDURE.md: ease-out to appear, ease-in to leave, exits 20–30% shorter than entrances, and only `transform`, `opacity` and blurs under 20px animate (plus `grid-template-rows` for an expander). Every one is off under reduced motion. Keep the values and write them in the project's stack.
 
 ## The curves
 
@@ -231,7 +231,7 @@ async function run(button, action) {
 
 ## Press
 
-The press rule from SKILL.md, with the opt-out built into the button:
+The press rule from PROCEDURE.md, with the opt-out built into the button:
 
 ```tsx
 function Button({ still = false, className, ...props }) {

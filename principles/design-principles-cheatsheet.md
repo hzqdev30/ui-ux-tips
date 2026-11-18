@@ -9,7 +9,7 @@ One-line definitions of the animation principles, UX laws and perception princip
 - Designing a password or sign-up flow (the second half of this file).
 - Reviewing a UI against principles rather than taste.
 
-Full rules with exact timings, curves and code: `charles/ux-animation/SKILL.md` (and its `references/recipes.md`, `references/techniques.md`). The ten core UX laws with diagnosis table: `ux-laws`.
+Full rules with exact timings, curves and code: `procedures/ux-animation/PROCEDURE.md` (and its `references/recipes.md`, `references/techniques.md`). The ten core UX laws with diagnosis table: `ux-laws`.
 
 ## Animation principles (Disney's 12, applied to UI)
 
@@ -66,4 +66,4 @@ These eight principles come from a single password-creation screen. They apply t
 
 ## Naming the principle
 
-When you add or review an animation, write its principle next to it in a comment or note ("anticipation: 5% pull back, 100ms"). If you cannot name one, ask whether it should exist at all (`charles/ux-animation/SKILL.md`, question 1: Should it move?).
+When you add or review an animation, write its principle next to it in a comment or note ("anticipation: 5% pull back, 100ms"). If you cannot name one, ask whether it should exist at all (`procedures/ux-animation/PROCEDURE.md`, question 1: Should it move?).

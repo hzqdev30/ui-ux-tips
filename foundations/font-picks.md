@@ -8,7 +8,7 @@ A shortlist of typefaces grouped by the feeling they give, plus the fonts that n
 - A design looks generic or "AI-generated" and the font is a suspect.
 - Pairing a UI font with a mono or display partner.
 
-Type scale, weights and hierarchy are in `typography`. Anti-AI-look rules (one interface family, weights 400-500, sentence case) are in `charles/unslop/SKILL.md` (pass 5, Type).
+Type scale, weights and hierarchy are in `typography`. Anti-AI-look rules (one interface family, weights 400-500, sentence case) are in `procedures/unslop/PROCEDURE.md` (pass 5, Type).
 
 ## Picks by vibe
 
@@ -30,7 +30,7 @@ These are not bad fonts. They are the default picks of generated UI, so they sig
 - Most fonts above are paid (Diatype, Lausanne, Aeonik, Söhne, GT, ABC, PP families). If the project cannot license one, choose the closest free font in the same vibe and say so. Do not silently fall back to a skipped AI-look font.
 - Free or open fonts in the list (verify the licence before shipping): IBM Plex Mono, Commit Mono, Familjen Grotesk, Departure Mono, Switzer (Fontshare).
 - One interface family plus at most one partner (for example a mono for code or numbers). A display face appears once.
-- Pick the vibe from the product's character words (see the Direction step in `charles/unslop/SKILL.md`), never from what is trending.
+- Pick the vibe from the product's character words (see the Direction step in `procedures/unslop/PROCEDURE.md`), never from what is trending.
 
 ## Checklist
 

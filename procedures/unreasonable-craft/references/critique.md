@@ -64,7 +64,7 @@ No praise padding.
 
 ## How many rounds
 
-One, by default. Then stop and report what step 5 of SKILL.md lists, so the user can decide whether to go again.
+One, by default. Then stop and report what step 5 of PROCEDURE.md lists, so the user can decide whether to go again.
 
 Run more only when the user asks, and do what they asked:
 

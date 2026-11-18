@@ -8,7 +8,7 @@
 - A gradient shows banding or looks "digital".
 - Choosing a background for a doorway screen (landing hero, login, empty state, confirmation).
 
-Colors are in `color-system`. Dark backgrounds are in `dark-mode`. The deeper rules on when a field or material is allowed (the five-test tree, "materials must earn themselves") are in `charles/unslop/SKILL.md` pass 8, with code in `charles/unslop/references/effects.md` and `charles/unslop/references/visuals.md`.
+Colors are in `color-system`. Dark backgrounds are in `dark-mode`. The deeper rules on when a field or material is allowed (the five-test tree, "materials must earn themselves") are in `procedures/unslop/PROCEDURE.md` pass 8, with code in `procedures/unslop/references/effects.md` and `procedures/unslop/references/visuals.md`.
 
 ## The 22 backgrounds
 

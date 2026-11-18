@@ -1,6 +1,6 @@
 ---
 name: ui-ux-tips
-description: One-stop UI/UX design skill. Curated rule guides (UX laws, visual hierarchy, spacing and grids, color, dark mode, typography, font picks by vibe, backgrounds and textures, icons, buttons, forms, login and password UX, selection controls, empty/error/loading states, navigation, cards, pricing, dashboards, settings, onboarding, mobile touch, UX writing, design-principles cheat sheet, review checklist) plus four full procedures bundled inside - charles/unslop (remove the AI-generated look), charles/polish (fine to exceptional, frame-by-frame motion), charles/ux-animation (the 20 principles of UX and animation) and charles/unreasonable-craft (award-level web/app design). Use whenever designing, building, reviewing, polishing or critiquing any user interface, screen, component, animation or flow, when a UI looks AI-generated or flat, or when asked for UI/UX best practices.
+description: UI/UX design rules and procedures. Use when designing, building, reviewing or polishing any interface, screen, component, animation or flow, when a UI looks AI-generated or flat, or when asked for UI/UX best practices. Covers UX laws, layout, color, type and fonts, forms, auth, states, navigation, mobile, motion, plus unslop, polish and award-level procedures.
 ---
 
 # UI/UX Tips (master index)
@@ -14,26 +14,26 @@ Paths below are relative to this folder (`~/.claude/skills/ui-ux-tips/`).
 1. Identify what is being designed or reviewed (a button, a form, a whole screen, a flow, an animation).
 2. Look up the matching guide(s) in the tables below and read them.
 3. For any full-screen design or review, also read `principles/visual-hierarchy-and-clean-ui.md` and `principles/spacing-grid-alignment.md`, and finish with `cross-cutting/design-review-checklist.md`.
-4. Pick a depth with the procedures table: quick rules (guides) for ordinary work; a `charles/` procedure when the user wants unslop, polish, motion, or award-level craft.
+4. Pick a depth with the procedures table: quick rules (guides) for ordinary work; a `procedures/` workflow when the user wants unslop, polish, motion, or award-level craft.
 5. Inside the guides, backtick names such as `color-system` refer to the file with that name in this folder tree.
 6. If the user names a guide or procedure ("use the buttons guide", "unslop this"), read that one directly.
 
-## Procedures - `charles/` (full workflows, read the SKILL.md inside)
+## Procedures - `procedures/` (full workflows, read the PROCEDURE.md inside)
 
-These are complete skills (from LemonFace0309/charles-skills) bundled here. They are not registered separately; read them from this folder.
+These are complete workflows (credited in README.md) bundled here. Their entry file is named `PROCEDURE.md`, not `SKILL.md`, so installers register only this skill. Read them from this folder when a task matches.
 
 | Procedure | Read when |
 |---|---|
-| `charles/unslop/SKILL.md` | A screen looks AI-generated, vibe-coded, generic or templated. Audit the tells, write a direction, subtract, fix spacing/color/icons/copy/type/layout/details, give it one real moment. References: `signs.md`, `tokens.md`, `visuals.md`, `effects.md`. CC BY 4.0, credit kept in the file. |
-| `charles/polish/SKILL.md` | A screen works but feels off or unfinished; hover/press/focus states, layout shift, hit areas, easing, springs, frame-by-frame motion checks, sound and haptics. If it still looks AI-made, run unslop first. |
-| `charles/ux-animation/SKILL.md` | Building or reviewing how an interface moves and responds: the 20 principles of UX and animation, Emil Kowalski's rules, timing/curve tables, optimistic UI, hit areas, forms, onboarding. References: `recipes.md` (modals, drawers, popovers, toasts, icon swaps...), `techniques.md` (curves, springs, arcs, storyboards...). |
-| `charles/unreasonable-craft/SKILL.md` | The user wants award-level design (Awwwards Site of the Day, Apple Design Award), "wow", "stunning", "can't look AI-made". Heavy: explore 3+ directions, generate assets, verify frame by frame, one critique round. References: `assets.md`, `verification.md`, `critique.md`; scripts in `scripts/` (Node 18+, ffmpeg, Chrome; run `npm install` in `scripts/` first; not executed or installed yet). |
+| `procedures/unslop/PROCEDURE.md` | A screen looks AI-generated, vibe-coded, generic or templated. Audit the tells, write a direction, subtract, fix spacing/color/icons/copy/type/layout/details, give it one real moment. References: `signs.md`, `tokens.md`, `visuals.md`, `effects.md`. CC BY 4.0, credit kept in the file. |
+| `procedures/polish/PROCEDURE.md` | A screen works but feels off or unfinished; hover/press/focus states, layout shift, hit areas, easing, springs, frame-by-frame motion checks, sound and haptics. If it still looks AI-made, run unslop first. |
+| `procedures/ux-animation/PROCEDURE.md` | Building or reviewing how an interface moves and responds: the 20 principles of UX and animation, Emil Kowalski's rules, timing/curve tables, optimistic UI, hit areas, forms, onboarding. References: `recipes.md` (modals, drawers, popovers, toasts, icon swaps...), `techniques.md` (curves, springs, arcs, storyboards...). |
+| `procedures/unreasonable-craft/PROCEDURE.md` | **Opt-in only: use when the user explicitly asks for award-level, Awwwards or Apple Design Award quality, "wow" or "stunning"; never for ordinary UI work.** The user wants award-level design (Awwwards Site of the Day, Apple Design Award), "wow", "stunning", "can't look AI-made". Heavy: explore 3+ directions, generate assets, verify frame by frame, one critique round. References: `assets.md`, `verification.md`, `critique.md`; scripts in `scripts/` (Node 18+, ffmpeg, Chrome; run `npm install` in `scripts/` first; not executed or installed yet). |
 
-Inside those files, names like `charles-unslop` or `charles-polish` mean the matching folder here (`charles/unslop`, `charles/polish`). Their relative `references/` links work as-is.
+Inside those files, names like `charles-unslop` or `charles-polish`, and mentions of `SKILL.md`, mean the matching folder or its `PROCEDURE.md` here (`procedures/unslop`, `procedures/polish`). Their relative `references/` links work as-is.
 
-Suggested order for a serious design job: `charles/unslop` (direction and subtraction) then `charles/ux-animation` (motion and flow) then `charles/polish` (details and frame checks), with `charles/unreasonable-craft` as the top-level bar when the user asks for award quality.
+Suggested order for a serious design job: `procedures/unslop` (direction and subtraction) then `procedures/ux-animation` (motion and flow) then `procedures/polish` (details and frame checks), with `procedures/unreasonable-craft` as the top-level bar when the user asks for award quality.
 
-Note: `charles/unreasonable-craft` mentions companion skills (`interface-craft`, `apple-design`, `animate`, `emil-design-eng`). They are not part of this bundle. Skip them if not installed; the principles in `charles/ux-animation` and `charles/polish` cover the same ground.
+Note: `procedures/unreasonable-craft` mentions companion skills (`interface-craft`, `apple-design`, `animate`, `emil-design-eng`). They are not part of this bundle. Skip them if not installed; the principles in `procedures/ux-animation` and `procedures/polish` cover the same ground.
 
 ## Principles - `principles/`
 
@@ -77,6 +77,12 @@ Note: `charles/unreasonable-craft` mentions companion skills (`interface-craft`,
 | `onboarding-flows.md` | Welcome/first-run flows, preference questions, reminders, free-trial explainers. |
 | `mobile-ui-and-touch.md` | Phone layouts, touch targets, thumb zone, mobile spacing. |
 
+## Examples - `examples/`
+
+| File | Read when |
+|---|---|
+| `login-page-before-after.md` | You want to see how the guides combine on one screen, before and after. |
+
 ## Cross-cutting - `cross-cutting/`
 
 | File | Read when |
@@ -91,16 +97,16 @@ Note: `charles/unreasonable-craft` mentions companion skills (`interface-craft`,
 - Settings page: `settings-and-profile`, `selection-controls`, `navigation`
 - Mobile app screen: `mobile-ui-and-touch`, `navigation`, `spacing-grid-alignment`
 - Design critique: `visual-hierarchy-and-clean-ui`, `spacing-grid-alignment`, `color-system`, then `design-review-checklist`
-- "Make it look less AI": `charles/unslop`, then `font-picks`, `backgrounds-and-textures`, `color-system`
-- Animation or interaction work: `charles/ux-animation`, `design-principles-cheatsheet`, then `charles/polish` for frame checks
-- Award-level site or app: `charles/unreasonable-craft` (loads the others as needed)
+- "Make it look less AI": `procedures/unslop`, then `font-picks`, `backgrounds-and-textures`, `color-system`
+- Animation or interaction work: `procedures/ux-animation`, `design-principles-cheatsheet`, then `procedures/polish` for frame checks
+- Award-level site or app (only on explicit request): `procedures/unreasonable-craft`
 
 ## Resolved conflicts (apply these)
 
 - Shadows: prefer subtle borders; use only soft shadows when needed.
 - Dark background: default `#121212`; `#000000` only when deliberately matching iOS.
 - Touch targets: at least 44px for anything tapped; 40px button height only for mouse-driven desktop.
-- Loading indicators: respond instantly (pressed state on the same frame), but show a spinner or "Saving..." only after about 300ms and hold it at least 500ms once shown (`charles/ux-animation`). This refines the older "show a loading state whenever a response is not immediate" in `ux-laws`.
-- Font weight: older guides suggest a heavy headline; when the goal is to avoid the AI look, use 400-500 (600 for rare emphasis) and build hierarchy from size and color (`charles/unslop` pass 5).
+- Loading indicators: respond instantly (pressed state on the same frame), but show a spinner or "Saving..." only after about 300ms and hold it at least 500ms once shown (`procedures/ux-animation`). This refines the older "show a loading state whenever a response is not immediate" in `ux-laws`.
+- Font weight: older guides suggest a heavy headline; when the goal is to avoid the AI look, use 400-500 (600 for rare emphasis) and build hierarchy from size and color (`procedures/unslop` pass 5).
 - Validation timing: positive progress immediately, error messages only when the field is finished (reward early, punish late). Once an error shows, re-check per keystroke so it clears.
 - Motion frequency: anything fired many times a session or from the keyboard gets no animation; keep press/hover feedback at 100-150ms regardless.
