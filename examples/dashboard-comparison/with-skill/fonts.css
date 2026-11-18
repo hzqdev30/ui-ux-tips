@@ -1,0 +1,22 @@
+/* All comparison fonts. Every one is free for commercial use (SIL OFL, MIT or Fontshare free licence). */
+@import url("https://api.fontshare.com/v2/css?f[]=switzer@400,500,600&display=swap");
+@import url("https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600&display=swap");
+@import url("https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600&display=swap");
+@import url("https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Inter:wght@400;500;600&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600&family=Space+Mono&family=Host+Grotesk:wght@400;500;600&family=Funnel+Sans:wght@400;500;600&family=Intel+One+Mono:wght@400;500&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/@fontsource/commit-mono@5.3.0/400.css");
+@import url("https://cdn.jsdelivr.net/npm/@fontsource/commit-mono@5.3.0/500.css");
+
+/* Self-published by their authors on GitHub, served through jsDelivr at a fixed commit */
+@font-face { font-family: "Apfel Grotezk"; src: url("https://cdn.jsdelivr.net/gh/collletttivo/apfel-grotezk@8b4c9f2682d274d7fae81d8eceef24f7f2fba4ea/fonts/ApfelGrotezk-Regular.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Apfel Grotezk"; src: url("https://cdn.jsdelivr.net/gh/collletttivo/apfel-grotezk@8b4c9f2682d274d7fae81d8eceef24f7f2fba4ea/fonts/ApfelGrotezk-Mittel.woff2") format("woff2"); font-weight: 500; font-display: swap; }
+@font-face { font-family: "Apfel Grotezk"; src: url("https://cdn.jsdelivr.net/gh/collletttivo/apfel-grotezk@8b4c9f2682d274d7fae81d8eceef24f7f2fba4ea/fonts/ApfelGrotezk-Satt.woff2") format("woff2"); font-weight: 600; font-display: swap; }
+@font-face { font-family: "Apfel Grotezk"; src: url("https://cdn.jsdelivr.net/gh/collletttivo/apfel-grotezk@8b4c9f2682d274d7fae81d8eceef24f7f2fba4ea/fonts/ApfelGrotezk-Fett.woff2") format("woff2"); font-weight: 700; font-display: swap; }
+@font-face { font-family: "Overused Grotesk"; src: url("https://cdn.jsdelivr.net/gh/RandomMaerks/Overused-Grotesk@749aa2c96c43a4af2d6932607ed42a5709982c5f/fonts/variable/OverusedGrotesk-VF.woff2") format("woff2"); font-weight: 300 900; font-display: swap; }
+@font-face { font-family: "Lil Grotesk"; src: url("https://cdn.jsdelivr.net/gh/noirblancrouge/LilGrotesk@150b9c8405ee95185c32023c09a430972309cfde/fonts/webfonts/LilGrotesk%5Bwght%5D.woff2") format("woff2"); font-weight: 100 900; font-display: swap; }
+@font-face { font-family: "BDO Grotesk"; src: url("https://cdn.jsdelivr.net/gh/LCTipografi/BDO-Grotesk@bbabafbd7bbddb106852d4a5e138fffcc1d3d9ef/Fonts/OTF/BDOGrotesk-Regular.otf") format("opentype"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "BDO Grotesk"; src: url("https://cdn.jsdelivr.net/gh/LCTipografi/BDO-Grotesk@bbabafbd7bbddb106852d4a5e138fffcc1d3d9ef/Fonts/OTF/BDOGrotesk-Medium.otf") format("opentype"); font-weight: 500; font-display: swap; }
+@font-face { font-family: "Giphurs"; src: url("https://cdn.jsdelivr.net/gh/Corne2Plum3/Giphurs@5b5e517c76e9cb80b1a9b389031eac2c4d032ded/fonts/otf/Giphurs-Regular.otf") format("opentype"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Giphurs"; src: url("https://cdn.jsdelivr.net/gh/Corne2Plum3/Giphurs@5b5e517c76e9cb80b1a9b389031eac2c4d032ded/fonts/otf/Giphurs-Medium.otf") format("opentype"); font-weight: 500; font-display: swap; }
+@font-face { font-family: "Departure Mono"; src: url("https://cdn.jsdelivr.net/gh/rektdeckard/departure-mono@75152a3f1e6dacdd248a6c397c97dbf27e33eea0/public/assets/DepartureMono-Regular.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Server Mono"; src: url("https://cdn.jsdelivr.net/gh/internet-development/www-server-mono@57dbb0d57fffd104ff35bf1cd2c9e198825eacc9/public/fonts/ServerMono-Regular.woff2") format("woff2"); font-weight: 400; font-display: swap; }

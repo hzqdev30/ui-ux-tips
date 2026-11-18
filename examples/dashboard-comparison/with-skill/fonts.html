@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Font comparison · Selat Line</title>
+<link rel="stylesheet" href="fonts.css">
+<style>
+  :root {
+    --page: #f5f7fa; --card: #ffffff; --raised: #eceff4;
+    --text: #111827; --text-2: #4b5565; --muted: #5f6878;
+    --hairline: rgb(17 24 39 / 0.08); --accent: #c2410c;
+    --ok: #15803d; --late: #b45309; --cancel: #dc2626;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--page); color: var(--text); font: 400 14px/20px "Switzer", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 1280px; margin: 0 auto; padding: 32px 32px 64px; }
+  h1 { font-size: 28px; line-height: 1.15; font-weight: 500; margin: 0 0 8px; }
+  .intro { color: var(--text-2); max-width: 70ch; margin: 0 0 24px; }
+  h2 { font-size: 16px; line-height: 24px; font-weight: 500; margin: 32px 0 12px; }
+  :focus-visible { outline: 2px solid #4b5565; outline-offset: 2px; border-radius: 6px; }
+
+  .controls { display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center; background: var(--card); border: 1px solid var(--hairline); border-radius: 12px; padding: 12px 16px; }
+  .controls label { color: var(--text-2); display: inline-flex; gap: 8px; align-items: center; white-space: nowrap; flex: 1 1 360px; }
+  .controls input[type=text] { font: inherit; font-size: 16px; height: 40px; flex: 1; min-width: 0; max-width: 480px; padding: 0 12px; border: 1px solid rgb(17 24 39 / 0.16); border-radius: 8px; background: var(--card); color: var(--text); }
+  .seg { display: inline-flex; background: var(--raised); border-radius: 8px; padding: 2px; }
+  .seg button { font: inherit; border: 0; background: transparent; height: 36px; padding: 0 12px; border-radius: 6px; color: var(--text-2); cursor: pointer; }
+  .seg button[aria-pressed=true] { background: var(--card); color: var(--text); box-shadow: 0 1px 2px rgb(0 0 0 / 0.06); }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 16px; }
+  .font-card { background: var(--card); border: 1px solid var(--hairline); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; }
+  .fc-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 16px 20px 0; font-family: "Switzer", system-ui, sans-serif; }
+  .fc-name { font-weight: 500; font-size: 16px; line-height: 24px; }
+  .tag { font-size: 12px; line-height: 16px; padding: 2px 8px; border-radius: 4px; white-space: nowrap; }
+  .tag-pick { background: rgb(21 128 61 / 0.10); color: var(--ok); }
+  .tag-skip { background: rgb(180 83 9 / 0.12); color: var(--late); }
+  .tag-base { background: var(--raised); color: var(--text-2); }
+  .fc-meta { color: var(--muted); font: 12px/16px "Switzer", system-ui, sans-serif; padding: 2px 20px 12px; }
+
+  /* The specimen: a slice of the real dashboard */
+  .spec { padding: 16px 20px 20px; border-top: 1px solid var(--hairline); flex: 1; font-variant-numeric: tabular-nums; }
+  .s-title { font-size: 28px; line-height: 1.15; font-weight: 500; letter-spacing: -0.01em; margin-bottom: 4px; }
+  .s-cond { color: var(--text-2); margin-bottom: 16px; }
+  .s-cond b { color: var(--text); font-weight: 500; }
+  .s-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px; }
+  .s-stat { background: var(--page); border-radius: 8px; padding: 12px; }
+  .s-label { color: var(--text-2); }
+  .s-num { font-size: 28px; line-height: 1; font-weight: 500; margin: 8px 0 6px; }
+  .s-note { font-size: 12px; line-height: 16px; color: var(--muted); }
+  .s-row { display: grid; grid-template-columns: 52px 1fr auto; gap: 12px; align-items: center; height: 40px; border-top: 1px solid var(--hairline); }
+  .s-mono { font-size: 12px; line-height: 16px; }
+  .s-status { display: inline-flex; align-items: center; gap: 6px; }
+  .s-status::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+  .s-glyphs { margin-top: 12px; color: var(--text-2); font-size: 16px; line-height: 24px; letter-spacing: 0.01em; }
+  .s-custom { margin-top: 12px; font-size: 20px; line-height: 28px; }
+
+  .fc-foot { padding: 12px 20px 16px; border-top: 1px solid var(--hairline); font-family: "Switzer", system-ui, sans-serif; }
+  .fc-foot a { color: var(--text); text-underline-offset: 3px; font-weight: 500; }
+
+  /* Mono cards */
+  .mono-spec { padding: 16px 20px 20px; border-top: 1px solid var(--hairline); }
+  .mono-spec table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .mono-spec td { height: 36px; border-bottom: 1px solid var(--hairline); padding-right: 12px; }
+  .mono-spec .big { font-size: 28px; line-height: 1.2; margin-bottom: 12px; }
+  .mono-spec .chars { color: var(--text-2); margin-top: 12px; font-size: 16px; line-height: 24px; }
+
+  .group-sub { color: var(--muted); margin: -8px 0 12px; }
+  .note { color: var(--muted); font-size: 12px; line-height: 16px; margin-top: 24px; max-width: 80ch; }
+  @media (max-width: 640px) { .wrap { padding: 20px 16px 48px; } .grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Pick the dashboard font</h1>
+  <p class="intro">Each card sets the same slice of the Selat Line dashboard in one font, at the sizes and weights the dashboard uses (12, 14, 16 and 28px; 400 and 500). Every font here is free for commercial use, with no trial limits. Cards are grouped by the style each one stands in for. Green tags are from the font-picks list, amber tags are fonts font-picks calls AI-looking, grey tags are free look-alikes. Open any card on the full dashboard to judge it in place.</p>
+
+  <div class="controls">
+    <label>Your own line <input type="text" id="custom" value="14:30 to Teluk Lima, 186 booked" aria-label="Sample text shown in every card"></label>
+    <span class="seg" role="group" aria-label="Background">
+      <button type="button" aria-pressed="true" data-bg="light">Light</button>
+      <button type="button" aria-pressed="false" data-bg="dark">Dark</button>
+    </span>
+  </div>
+
+  <div id="sections"></div>
+
+  <p class="note">Paid originals (ABC Diatype, TWK Lausanne, Saans, PP Mori, Aeonik, GT Walsheim, Circular, ABC Favorit, Monument Grotesk, Söhne Mono, GT America Mono) have no legal free version, so they are not shown. "Stands in for" is a judgment of look and feel, not a claim by the font's author. Departure Mono and Server Mono have one weight only, which is all the mono text in the dashboard needs.</p>
+</div>
+
+<script>
+  // kind: sans | mono · tag: pick (font-picks list) | skip (font-picks: AI-looking) | alt (free look-alike)
+  const GROUPS = [
+    { title: "Clean Swiss look", sub: "Stands in for ABC Diatype, TWK Lausanne, Saans", kind: "sans", fonts: [
+      { name: "Switzer", tag: "pick", meta: "Fontshare free licence · current choice" },
+      { name: "Overused Grotesk", tag: "alt", meta: "SIL OFL · neo-grotesk, variable" },
+      { name: "BDO Grotesk", tag: "alt", meta: "SIL OFL · neo-grotesk" },
+      { name: "Host Grotesk", tag: "alt", meta: "SIL OFL · Google Fonts" },
+      { name: "Giphurs", tag: "alt", meta: "SIL OFL · neo-grotesk after Helvetica" },
+    ]},
+    { title: "Something friendly", sub: "Stands in for PP Mori, Aeonik, GT Walsheim, Circular", kind: "sans", fonts: [
+      { name: "Satoshi", tag: "alt", meta: "Fontshare free licence" },
+      { name: "General Sans", tag: "alt", meta: "Fontshare free licence" },
+      { name: "Funnel Sans", tag: "alt", meta: "SIL OFL · Google Fonts" },
+    ]},
+    { title: "A bit of personality", sub: "Stands in for ABC Favorit, Monument Grotesk; Apfel Grotezk is the real one", kind: "sans", fonts: [
+      { name: "Apfel Grotezk", tag: "pick", meta: "SIL OFL · Collletttivo · the original, free · 4 weights" },
+      { name: "Familjen Grotesk", tag: "pick", meta: "SIL OFL · Google Fonts" },
+      { name: "Lil Grotesk", tag: "alt", meta: "SIL OFL · variable" },
+      { name: "Cabinet Grotesk", tag: "alt", meta: "Fontshare free licence" },
+    ]},
+    { title: "Baselines and AI-looking", sub: "For reference; tokens.md recommends the amber ones, font-picks says skip", kind: "sans", fonts: [
+      { name: "IBM Plex Sans", tag: "base", meta: "SIL OFL · pairs with Plex Mono" },
+      { name: "Inter", tag: "base", meta: "SIL OFL · the most common UI default" },
+      { name: "Geist", tag: "skip", meta: "SIL OFL" },
+      { name: "Space Grotesk", tag: "skip", meta: "SIL OFL" },
+      { name: "Instrument Sans", tag: "skip", meta: "SIL OFL" },
+    ]},
+    { title: "Mono partner", sub: "Times, piers, chart labels · stands in for ABC Diatype Mono, Söhne Mono, GT America Mono", kind: "mono", fonts: [
+      { name: "IBM Plex Mono", tag: "pick", meta: "SIL OFL · current choice" },
+      { name: "Commit Mono", tag: "pick", meta: "MIT · neutral coding font" },
+      { name: "Departure Mono", tag: "pick", meta: "MIT · pixel, lo-fi; one weight" },
+      { name: "Intel One Mono", tag: "alt", meta: "SIL OFL · Google Fonts" },
+      { name: "Server Mono", tag: "alt", meta: "SIL OFL · typewriter feel; one weight" },
+      { name: "Geist Mono", tag: "base", meta: "SIL OFL · tokens.md recommends it" },
+      { name: "JetBrains Mono", tag: "skip", meta: "SIL OFL" },
+      { name: "Space Mono", tag: "skip", meta: "SIL OFL" },
+    ]},
+  ];
+  const TAG = { pick: ["tag-pick", "Font-picks: use"], skip: ["tag-skip", "Font-picks: skip"], alt: ["tag-base", "Free look-alike"], base: ["tag-base", "Baseline"] };
+  const esc = s => s.replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+  const sansCard = f => `
+    <article class="font-card">
+      <div class="fc-head"><span class="fc-name">${f.name}</span><span class="tag ${TAG[f.tag][0]}">${TAG[f.tag][1]}</span></div>
+      <div class="fc-meta">${f.meta}</div>
+      <div class="spec" style="font-family:'${f.name}', system-ui, sans-serif">
+        <div class="s-title">Wednesday, 18 November</div>
+        <div class="s-cond">Wind <b>14 kn SW</b>, gusts 22 · Duty: <b>Faridah Osman</b></div>
+        <div class="s-stats">
+          <div class="s-stat"><div class="s-label">Passengers carried</div><div class="s-num">3,184</div><div class="s-note">5,960 booked for the day</div></div>
+          <div class="s-stat"><div class="s-label">On time</div><div class="s-num">92%</div><div class="s-note"><span style="color:var(--ok)">+3 pts</span> vs last Wednesday</div></div>
+        </div>
+        <div class="s-row"><span class="s-mono" style="font-family:'IBM Plex Mono', monospace">14:30</span><span>To Teluk Lima · MV Camar</span><span class="s-status" style="color:var(--late)">25 min late</span></div>
+        <div class="s-row"><span class="s-mono" style="font-family:'IBM Plex Mono', monospace">15:00</span><span>To Pulau Rendah · MV Tenang</span><span class="s-status" style="color:var(--ok)">On time</span></div>
+        <div class="s-glyphs">0123456789 Il1 O0 rn m &amp; @ → %</div>
+        <div class="s-custom custom-line"></div>
+      </div>
+      <div class="fc-foot"><a href="index.html?sans=${encodeURIComponent(f.name)}" target="_blank" rel="noopener">Open dashboard in ${f.name}</a></div>
+    </article>`;
+
+  const monoCard = f => `
+    <article class="font-card">
+      <div class="fc-head"><span class="fc-name">${f.name}</span><span class="tag ${TAG[f.tag][0]}">${TAG[f.tag][1]}</span></div>
+      <div class="fc-meta">${f.meta}</div>
+      <div class="mono-spec" style="font-family:'${f.name}', monospace">
+        <div class="big">14:20 · A2</div>
+        <table>
+          <tr><td>14:45</td><td>MV Bayu</td><td>274 / 300</td><td>A2</td></tr>
+          <tr><td>16:15</td><td>MV Bayu</td><td>298 / 300</td><td>A2</td></tr>
+          <tr><td>17:15</td><td>MV Tenang</td><td>64 / 180</td><td>B1</td></tr>
+        </table>
+        <div class="chars">06 08 10 12 14 16 18 20 22<br>Il1| O0o {}[] =&gt; !=</div>
+        <div class="s-custom custom-line"></div>
+      </div>
+      <div class="fc-foot"><a href="index.html?mono=${encodeURIComponent(f.name)}" target="_blank" rel="noopener">Open dashboard with ${f.name}</a></div>
+    </article>`;
+
+  document.getElementById("sections").innerHTML = GROUPS.map(g => `
+    <h2>${g.title}</h2>
+    <p class="group-sub">${g.sub}</p>
+    <div class="grid">${g.fonts.map(g.kind === "mono" ? monoCard : sansCard).join("")}</div>`).join("");
+
+  const custom = document.getElementById("custom");
+  const paint = () => document.querySelectorAll(".custom-line").forEach(el => el.textContent = custom.value);
+  custom.addEventListener("input", paint); paint();
+
+  // Light / dark background, to see how each face holds up on the ink ramp
+  const DARK = { "--page": "#0b0d14", "--card": "#11141c", "--raised": "#1a1e28", "--text": "#eef0f5", "--text-2": "#a3a9b8", "--muted": "#8a91a3", "--hairline": "rgb(238 240 245 / 0.08)", "--ok": "#4cc38a", "--late": "#e3a04f" };
+  const LIGHT = { "--page": "#f5f7fa", "--card": "#ffffff", "--raised": "#eceff4", "--text": "#111827", "--text-2": "#4b5565", "--muted": "#5f6878", "--hairline": "rgb(17 24 39 / 0.08)", "--ok": "#15803d", "--late": "#b45309" };
+  document.querySelectorAll("[data-bg]").forEach(b => b.addEventListener("click", () => {
+    const set = b.dataset.bg === "dark" ? DARK : LIGHT;
+    for (const [k, v] of Object.entries(set)) document.documentElement.style.setProperty(k, v);
+    document.querySelectorAll("[data-bg]").forEach(x => x.setAttribute("aria-pressed", x === b));
+  }));
+</script>
+</body>
+</html>
