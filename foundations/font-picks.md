@@ -25,10 +25,14 @@ Geist, Space Grotesk, Bricolage Grotesque, Instrument Sans, JetBrains Mono, Spac
 
 These are not bad fonts. They are the default picks of generated UI, so they signal "a model made this". Skip them unless the user or an existing brand already uses one.
 
+## Free stand-ins and downloads
+
+Free fonts for each vibe, with licence and download link, are in `font-sources` (and a ready CSS file, `font-sources.css`). Free stand-ins by vibe: Swiss = Switzer, Overused Grotesk, BDO Grotesk, Host Grotesk, Giphurs; friendly = Satoshi, General Sans, Funnel Sans; personality = Apfel Grotezk (the real one), Familjen Grotesk, Lil Grotesk, Cabinet Grotesk; mono = IBM Plex Mono, Commit Mono, Departure Mono, Intel One Mono, Server Mono.
+
 ## How to apply
 
 - Most fonts above are paid (Diatype, Lausanne, Aeonik, Söhne, GT, ABC, PP families). If the project cannot license one, choose the closest free font in the same vibe and say so. Do not silently fall back to a skipped AI-look font.
-- Free or open fonts in the list (verify the licence before shipping): IBM Plex Mono, Commit Mono, Familjen Grotesk, Departure Mono, Switzer (Fontshare).
+- Free fonts on the list: IBM Plex Mono, Commit Mono, Familjen Grotesk, Departure Mono, Switzer, Apfel Grotezk. Links in `font-sources`.
 - One interface family plus at most one partner (for example a mono for code or numbers). A display face appears once.
 - Pick the vibe from the product's character words (see the Direction step in `procedures/unslop/PROCEDURE.md`), never from what is trending.
 

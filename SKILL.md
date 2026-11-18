@@ -52,6 +52,7 @@ Note: `procedures/unreasonable-craft` mentions companion skills (`interface-craf
 | `dark-mode.md` | Adding or converting to a dark theme; dark backgrounds, elevation, saturation, shadows. |
 | `typography.md` | Choosing type scale, text sizes, weights, text hierarchy. |
 | `font-picks.md` | Choosing a typeface by vibe (Swiss, friendly, personality, mono) and avoiding AI-looking fonts (Geist, Space Grotesk, Bricolage Grotesque, Instrument Sans, JetBrains Mono, Space Mono). |
+| `font-sources.md` | You picked a font and need its licence, official page, download link or install command; also `font-sources.css`, a ready file that loads every tested font. |
 | `backgrounds-and-textures.md` | A design feels flat; 22 background treatments (felt, fluted glass, halftone, grain, ASCII...), film grain against banding, rules for using texture. |
 | `icons.md` | Icon sets, consistency, optical sizing, icon plus label. |
 
