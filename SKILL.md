@@ -103,10 +103,32 @@ Note: `procedures/unreasonable-craft` mentions companion skills (`interface-craf
 
 ## Resolved conflicts (apply these)
 
-- Shadows: prefer subtle borders; use only soft shadows when needed.
+General rule: the newer, stricter procedure wins on exact numbers; the older guide keeps the "why". The user's own instruction always wins over both.
+
+### Visual
+- Shadows: prefer subtle borders; use only soft shadows when needed; one depth cue per surface.
 - Dark background: default `#121212`; `#000000` only when deliberately matching iOS.
-- Touch targets: at least 44px for anything tapped; 40px button height only for mouse-driven desktop.
-- Loading indicators: respond instantly (pressed state on the same frame), but show a spinner or "Saving..." only after about 300ms and hold it at least 500ms once shown (`procedures/ux-animation`). This refines the older "show a loading state whenever a response is not immediate" in `ux-laws`.
-- Font weight: older guides suggest a heavy headline; when the goal is to avoid the AI look, use 400-500 (600 for rare emphasis) and build hierarchy from size and color (`procedures/unslop` pass 5).
-- Validation timing: positive progress immediately, error messages only when the field is finished (reward early, punish late). Once an error shows, re-check per keystroke so it clears.
+- Focus: always a visible ring, in a neutral color, at least 3:1 contrast (not a brand-colored ring).
+- Neutrals and accent: tint neutrals from the product's world (blue-grey only if it fits); one accent in the chrome plus semantic colors. The 5-step accent scale is for states and tints, not extra accents.
+- Backgrounds: textures and fields only on doorway screens (hero, login, empty state), with a reason. No decorative shapes or textures on working screens.
+- Icons: icon-only buttons only for universal symbols. Navigation keeps icon + label. Do not put an icon on every list row or label; add one only where it speeds scanning.
+- Navigation bars: classic icon + label is the default. Floating, circle, diamond, bubble and active-text-only variants need a stated reason.
+- Pricing: keep one clearly recommended card, size cards by content, and show a "Most popular" badge only if it is true. Promote annual billing visually, but the user selects the toggle themselves; never pre-select anything that costs money.
+
+### Type and copy
+- Font weight: older guides suggest a heavy headline; use 400-500 (600 for rare emphasis) and build hierarchy from size and color.
+- Case: sentence case. Uppercase eyebrows only when the real object is uppercase.
+- Type sizes: define a full scale if needed, but use at most 5 sizes on any one screen. Form inputs are 16px; body 14-16px.
+- Tone: no exclamation marks and no greeting-style hero headlines ("Welcome back!"). Friendly, specific body copy is fine. Say the plain thing; playful only when the brand voice already exists.
+- Success feedback: a check or short plain message ("Saved"), not "Looks good!" or "Saved successfully!".
+- Empty states: keep headline and CTA. Add sub-copy only if it adds information; use an illustration only if it was drawn for this product.
+- Placeholder text: at least 4.5:1 contrast but visibly lighter than the entered value.
+
+### Behaviour and motion
+- Touch targets: at least 44px for anything tapped; 40px only for mouse-only desktop.
+- Loading: the pressed state shows on the same frame. Show a spinner or "Saving..." only after about 300ms and hold it at least 500ms. Use a skeleton only after about 1s and only where results appear, sized to the content; otherwise the trigger's pending state is enough.
+- Validation timing: positive progress shows immediately; error messages wait until the field is finished (blur or submit). Once an error shows, re-check on every keystroke so it clears. Exception: a clearly bad value (a known common password such as `Password1!`) may be flagged immediately.
+- Destructive actions: reversible actions get an Undo toast (5s or more) instead of a confirmation. Irreversible actions get a confirmation whose button names the verb and object ("Delete 3 files"); Cancel has default focus.
+- Progress: one progress indicator per flow (a stepper or a bar, not both).
 - Motion frequency: anything fired many times a session or from the keyboard gets no animation; keep press/hover feedback at 100-150ms regardless.
+- Tooltip duration: 125ms (other popovers 150-250ms).
