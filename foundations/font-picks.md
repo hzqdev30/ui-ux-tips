@@ -25,6 +25,20 @@ Geist, Space Grotesk, Bricolage Grotesque, Instrument Sans, JetBrains Mono, Spac
 
 These are not bad fonts. They are the default picks of generated UI, so they signal "a model made this". Skip them unless the user or an existing brand already uses one.
 
+## Every project picks a font
+
+The system font (`system-ui`, Segoe UI, Arial) reads as "nobody chose". Every project picks an interface font, and optionally a mono partner, once at setup, and records the choice where the team keeps design decisions. Use the system font only when the user decides it (for example, a strict no-download rule).
+
+How to install it, by project type:
+
+| Project | Install | Load |
+|---|---|---|
+| Vite, Laravel, React, any npm build | `npm i @fontsource/<font>` for Google/Fontsource fonts (see `font-sources`) | In the main CSS: `@import "@fontsource/<font>/400.css";` and `500.css`, then set `--font-sans` |
+| Fontshare or GitHub-only fonts (Switzer, Satoshi, Overused Grotesk) | Download the zip from `font-sources`, copy the `.woff2` files and the licence into the project (for example `resources/fonts/`) | `@font-face` in the main CSS, `font-display: swap` |
+| Plain HTML prototype | The CDN links in `font-sources.css` | A `<link>` in the page |
+
+A project that forbids CDNs still gets a real font: install it through npm or self-host the files. Load only the weights you use (usually 400 and 500).
+
 ## Free stand-ins and downloads
 
 Free fonts for each vibe, with licence and download link, are in `font-sources` (and a ready CSS file, `font-sources.css`). Free stand-ins by vibe: Swiss = Switzer, Overused Grotesk, BDO Grotesk, Host Grotesk, Giphurs; friendly = Satoshi, General Sans, Funnel Sans; personality = Apfel Grotezk (the real one), Familjen Grotesk, Lil Grotesk, Cabinet Grotesk; mono = IBM Plex Mono, Commit Mono, Departure Mono, Intel One Mono, Server Mono.
@@ -38,6 +52,7 @@ Free fonts for each vibe, with licence and download link, are in `font-sources` 
 
 ## Checklist
 
+- [ ] A font was chosen and installed (not the system font, unless the user decided so)
 - [ ] Vibe chosen from the product, then font chosen from that vibe
 - [ ] Not one of the six AI-looking fonts (unless already the brand's)
 - [ ] One interface family, at most one partner

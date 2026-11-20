@@ -73,7 +73,7 @@ Note: `procedures/unreasonable-craft` mentions companion skills (`interface-craf
 
 | File | Read when |
 |---|---|
-| `dashboards-and-data.md` | Dashboards, KPI widgets, choosing chart types. |
+| `dashboards-and-data.md` | Dashboards and admin home screens: start from the job, one main block, stat figures without icons, chart choice. |
 | `settings-and-profile.md` | Settings, account and profile screens, account deletion. |
 | `onboarding-flows.md` | Welcome/first-run flows, preference questions, reminders, free-trial explainers. |
 | `mobile-ui-and-touch.md` | Phone layouts, touch targets, thumb zone, mobile spacing. |
@@ -88,6 +88,7 @@ Note: `procedures/unreasonable-craft` mentions companion skills (`interface-craf
 
 | File | Read when |
 |---|---|
+| `component-systems.md` | An app built from shared house components (admin, back-office, CRUD, Laravel Blade, a React component library): decide font, icon policy, case, containers and density once at setup; screens look like a generic admin template. |
 | `ux-writing-microcopy.md` | Any interface text: labels, errors, prompts, cancellation flows, placeholder text. |
 | `design-review-checklist.md` | Before sharing or handing off a design, or when asked to review or polish one. |
 
@@ -96,6 +97,7 @@ Note: `procedures/unreasonable-craft` mentions companion skills (`interface-craf
 - Login screen: `auth-screens`, `forms-and-inputs`, `buttons-and-ctas`
 - Landing or pricing section: `pricing-cards`, `visual-hierarchy-and-clean-ui`, `buttons-and-ctas`, `typography`, `font-picks`, `backgrounds-and-textures`
 - Settings page: `settings-and-profile`, `selection-controls`, `navigation`
+- Admin or CRUD system with house components: `component-systems` first (at setup), then `dashboards-and-data`, `forms-and-inputs`, `navigation`, `font-picks`
 - Mobile app screen: `mobile-ui-and-touch`, `navigation`, `spacing-grid-alignment`
 - Design critique: `visual-hierarchy-and-clean-ui`, `spacing-grid-alignment`, `color-system`, then `design-review-checklist`
 - "Make it look less AI": `procedures/unslop`, then `font-picks`, `backgrounds-and-textures`, `color-system`
@@ -112,13 +114,17 @@ General rule: the newer, stricter procedure wins on exact numbers; the older gui
 - Focus: always a visible ring, in a neutral color, at least 3:1 contrast (not a brand-colored ring).
 - Neutrals and accent: tint neutrals from the product's world (blue-grey only if it fits); one accent in the chrome plus semantic colors. The 5-step accent scale is for states and tints, not extra accents.
 - Backgrounds: textures and fields only on doorway screens (hero, login, empty state), with a reason. No decorative shapes or textures on working screens.
-- Icons: icon-only buttons only for universal symbols. Navigation keeps icon + label. Do not put an icon on every list row or label; add one only where it speeds scanning.
+- Icons: icon-only buttons only for universal symbols. Navigation keeps icon + label. No icon on card titles, page titles, section headings, stat figures or labelled buttons unless the icon carries meaning (a warning, a status). Older guides that put an icon on widget headings are overruled (`dashboards-and-data`, `component-systems`).
 - Navigation bars: classic icon + label is the default. Floating, circle, diamond, bubble and active-text-only variants need a stated reason.
 - Pricing: keep one clearly recommended card, size cards by content, and show a "Most popular" badge only if it is true. Promote annual billing visually, but the user selects the toggle themselves; never pre-select anything that costs money.
 
+- Containers: a card only where a group needs a boundary; never a card inside a card; page titles and context lines are not in cards.
+- Fonts: every project picks and installs a real font; the system font only by the user's decision (`font-picks`).
+
 ### Type and copy
+- Font choice: `font-picks` wins over the "Type families" table in `procedures/unslop/references/tokens.md`. Skip the fonts font-picks lists as AI-looking (Geist, Space Grotesk, Instrument Sans, Bricolage Grotesque, JetBrains Mono, Space Mono) even where tokens.md suggests them; take a free stand-in from `font-sources`.
 - Font weight: older guides suggest a heavy headline; use 400-500 (600 for rare emphasis) and build hierarchy from size and color.
-- Case: sentence case. Uppercase eyebrows only when the real object is uppercase.
+- Case: sentence case for all interface text (titles, labels, buttons, menus, dialog titles, role names). Uppercase eyebrows only when the real object is uppercase. Data the business stores uppercase is shown as data in tables and fields; statuses go through a label map, never raw (`component-systems`).
 - Type sizes: define a full scale if needed, but use at most 5 sizes on any one screen. Form inputs are 16px; body 14-16px.
 - Tone: no exclamation marks and no greeting-style hero headlines ("Welcome back!"). Friendly, specific body copy is fine. Say the plain thing; playful only when the brand voice already exists.
 - Success feedback: a check or short plain message ("Saved"), not "Looks good!" or "Saved successfully!".
