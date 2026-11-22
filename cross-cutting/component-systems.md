@@ -17,7 +17,7 @@ Record each decision where the team keeps design decisions (a UI/UX document, a 
 | Decision | Default to start from | Why it matters |
 |---|---|---|
 | **Font** | A real interface font from `font-picks`, installed per `font-picks` (not the system font) | The system font is the strongest template signal |
-| **Icon policy** | Icons in navigation and on icon-only buttons. **No icon on card titles, page titles, section headings or labelled buttons**, except where the icon carries meaning (a warning, a status) | An icon on every heading and button is the classic admin-template look |
+| **Icon policy** | Icons in navigation and on icon-only buttons. **No icon on card titles, page titles or section headings**, and none on labelled buttons by default, except where the icon carries meaning (a warning, a status). A project may allow an icon beside a button label where it helps (Add, Export); record that choice with the other setup decisions | An icon on every heading and button is the classic admin-template look |
 | **Icon set** | One outline or line set at one size and stroke (16-20 px). Avoid a heavy solid set as the default | Solid filled icons everywhere read heavy and generic |
 | **Case** | Sentence case for every piece of interface text: titles, labels, buttons, menu items, dialog titles, role names | ALL-CAPS chrome shouts and reads as a legacy system |
 | **Stored uppercase data** | Data the business stores uppercase (names, codes, statuses) is shown as data, in tables and fields. Statuses are shown through a label map ("ACTIVE" becomes "Aktif"), never raw | Keeps the stored convention without letting it leak into the chrome |

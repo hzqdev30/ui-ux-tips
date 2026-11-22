@@ -44,6 +44,7 @@ Field-level validation is in `forms-and-inputs`. Alert colors and banner styling
 - Use them for important or irreversible actions so users can reconsider; they prevent accidental loss.
 - Structure: a warning icon, a title that names the object ("Delete this item?"), a plain explanation ("This action cannot be undone"), and two buttons - a safe secondary (Cancel / "No, keep it") and a clear destructive primary ("Yes, delete").
 - For very serious actions (account deletion): make the entry point visually distinct (red warning illustration, outlined red button), explain consequences and exceptions, and require an extra confirmation before the final action. Make the action clear but hard to trigger by accident.
+- Confirm and Undo can be combined: confirm first, then show an Undo toast (about 8 seconds) for records that matter (referenced by other records, costly to recreate, or deleted in bulk). Use it when the product wants a confirm on every delete but a way back for the costly ones.
 
 ## 7. Do not overuse popups
 

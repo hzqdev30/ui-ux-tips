@@ -114,7 +114,7 @@ General rule: the newer, stricter procedure wins on exact numbers; the older gui
 - Focus: always a visible ring, in a neutral color, at least 3:1 contrast (not a brand-colored ring).
 - Neutrals and accent: tint neutrals from the product's world (blue-grey only if it fits); one accent in the chrome plus semantic colors. The 5-step accent scale is for states and tints, not extra accents.
 - Backgrounds: textures and fields only on doorway screens (hero, login, empty state), with a reason. No decorative shapes or textures on working screens.
-- Icons: icon-only buttons only for universal symbols. Navigation keeps icon + label. No icon on card titles, page titles, section headings, stat figures or labelled buttons unless the icon carries meaning (a warning, a status). Older guides that put an icon on widget headings are overruled (`dashboards-and-data`, `component-systems`).
+- Icons: icon-only buttons only for universal symbols. Navigation keeps icon + label. No icon on card titles, page titles, section headings, stat figures or labelled buttons unless the icon carries meaning (a warning, a status). Older guides that put an icon on widget headings are overruled (`dashboards-and-data`, `component-systems`). A project may decide to allow an icon beside a button label where it helps people find the action (Add, Export, Delete), not on every button; once decided and recorded, that is the rule for that project.
 - Navigation bars: classic icon + label is the default. Floating, circle, diamond, bubble and active-text-only variants need a stated reason.
 - Pricing: keep one clearly recommended card, size cards by content, and show a "Most popular" badge only if it is true. Promote annual billing visually, but the user selects the toggle themselves; never pre-select anything that costs money.
 
@@ -135,7 +135,7 @@ General rule: the newer, stricter procedure wins on exact numbers; the older gui
 - Touch targets: at least 44px for anything tapped; 40px only for mouse-only desktop.
 - Loading: the pressed state shows on the same frame. Show a spinner or "Saving..." only after about 300ms and hold it at least 500ms. Use a skeleton only after about 1s and only where results appear, sized to the content; otherwise the trigger's pending state is enough.
 - Validation timing: positive progress shows immediately; error messages wait until the field is finished (blur or submit). Once an error shows, re-check on every keystroke so it clears. Exception: a clearly bad value (a known common password such as `Password1!`) may be flagged immediately.
-- Destructive actions: reversible actions get an Undo toast (5s or more) instead of a confirmation. Irreversible actions get a confirmation whose button names the verb and object ("Delete 3 files"); Cancel has default focus.
+- Destructive actions: reversible actions get an Undo toast (5s or more) instead of a confirmation. Irreversible actions get a confirmation whose button names the verb and object ("Delete 3 files"); Cancel has default focus. A project may choose to confirm every delete and add an Undo toast (8s) afterwards for records that matter (referenced by others, costly to recreate, bulk deletes); once decided and recorded, that is the rule for that project.
 - Progress: one progress indicator per flow (a stepper or a bar, not both).
 - Motion frequency: anything fired many times a session or from the keyboard gets no animation; keep press/hover feedback at 100-150ms regardless.
 - Tooltip duration: 125ms (other popovers 150-250ms).
