@@ -36,7 +36,7 @@ Login/sign-up specifics are in `auth-screens`. Choice controls (radio, checkbox,
 - Show the error at the field that caused it: red border plus an icon on the field and a message directly beneath it ("Please enter a valid card number"). Do not list errors together at the bottom or in a generic banner.
 - Validate quickly, in real time where sensible, so users can fix an error before moving on.
 - Say how to fix it in plain language; do not blame the user ("Invalid password" becomes "Password must be at least 8 characters, include a number and a capital letter").
-- Show success states too: green border plus a check and "Looks good!".
+- Show success states too: green border plus a check, no message text ("Looks good!" is banned, see the resolved conflicts in `SKILL.md`).
 - Error color is reserved for errors only (see `color-system`).
 
 ## 5. Multi-step forms: show progress

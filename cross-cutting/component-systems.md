@@ -17,11 +17,11 @@ Record each decision where the team keeps design decisions (a UI/UX document, a 
 | Decision | Default to start from | Why it matters |
 |---|---|---|
 | **Font** | A real interface font from `font-picks`, installed per `font-picks` (not the system font) | The system font is the strongest template signal |
-| **Icon policy** | Icons in navigation and on icon-only buttons. **No icon on card titles, page titles or section headings**, and none on labelled buttons by default, except where the icon carries meaning (a warning, a status). A project may allow an icon beside a button label where it helps (Add, Export); record that choice with the other setup decisions | An icon on every heading and button is the classic admin-template look |
+| **Icon policy** | Icons in navigation and on icon-only buttons; elsewhere as the project's design source shows them. Record the choice with the other setup decisions | An icon on every heading and button, with no design source behind it, reads as a generic admin template |
 | **Icon set** | One outline or line set at one size and stroke (16-20 px). Avoid a heavy solid set as the default | Solid filled icons everywhere read heavy and generic |
 | **Case** | Sentence case for every piece of interface text: titles, labels, buttons, menu items, dialog titles, role names | ALL-CAPS chrome shouts and reads as a legacy system |
 | **Stored uppercase data** | Data the business stores uppercase (names, codes, statuses) is shown as data, in tables and fields. Statuses are shown through a label map ("ACTIVE" becomes "Aktif"), never raw | Keeps the stored convention without letting it leak into the chrome |
-| **Containers** | A card only where a group needs a boundary. Page titles, context lines and filter bars sit on the page, not in cards. Never a card inside a card | "Everything in a bordered card with a header strip" is the default admin layout |
+| **Containers** | As the project's design source shows them; with none, a card only where a group needs a boundary | "Everything in a bordered card with a header strip" is the default admin layout |
 | **Density** | One row height for tables (40-44 px), one for forms; 44 px touch targets | Mixed densities look unplanned |
 | **Depth** | Hairline borders or surface steps, one depth cue per surface | Shadow on every card adds noise |
 | **Type scale** | At most 5 sizes, weights 400 and 500 (600 rare) | Keeps every screen consistent |
@@ -29,7 +29,7 @@ Record each decision where the team keeps design decisions (a UI/UX document, a 
 ## 2. Build components that make the right thing easy
 
 - **Make decoration optional and off by default.** An `icon` prop on a card or page title defaults to none. If the component API asks for an icon, every author will fill it.
-- **Examples teach.** The first examples in the house docs are what every later screen copies. Keep them plain: a card with a title and no icon, a button with text and no icon unless the action is ambiguous.
+- **Examples teach.** The first examples in the house docs are what every later screen copies. Keep them plain and take them from the project's design source.
 - **Give the dashboard its own room.** The dashboard is the one screen that may break the standard card grid (`dashboards-and-data`). Do not force it into the list-screen pattern.
 - **Empty and loading states are components too,** sized to their content: one line plus an action, not a tall card with a large grey icon.
 

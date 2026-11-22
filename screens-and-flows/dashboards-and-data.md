@@ -25,7 +25,7 @@ Then every block must serve line 2 or line 3. A widget that only "shows data" (a
 1. **Page title is the period or the place, not a greeting.** "Jumaat, 20 November" or "Today", never "Welcome back, Aina!".
 2. **Context line under it** when the job depends on it: duty officer, weather, which branch, last sync. One line, no cards.
 3. **The one primary action** in the header, top-right on desktop, in reach on a phone ("Tempah slot", "Post notice"). Only one.
-4. **Stat figures (optional).** 3 or 4 compact figures, one row, one height. Each is a number, its label and its change *against something* ("+3 vs last week"). No icons, no sparklines, no mini bars inside them.
+4. **Stat figures (optional).** 3 or 4 compact figures, one row, one height. Each is a number, its label and its change *against something* ("+3 vs last week"). Icons and sparklines as the project's design source shows them.
 5. **One main block** that shows the real work, at least two thirds of the width: a timeline, a calendar, a queue, a map, the main chart. It is the moment of the screen (`procedures/unslop` pass 8: real content, drawn with care).
 6. **One secondary block** beside or below it: a list of what needs attention, today's items, approvals waiting. A list or table, not a second chart.
 7. **Full list or table** below, if the job needs it.
@@ -34,8 +34,8 @@ There is no fixed grid of equal widgets. Size each block by how much it matters;
 
 ## 3. Rules
 
-- **Do not wrap everything in identical cards.** A card is for a group that needs a boundary. Stat figures can share one surface; the page title and context line never sit in a card. Nested cards are never allowed.
-- **Card and section headings carry no icon by default.** The title is enough. An icon earns its place only when it carries meaning a word would not (a status, a warning).
+- **Do not wrap everything in identical cards.** A card is for a group that needs a boundary; follow the project's design source for nesting and stat tiles.
+- **Card and section headings:** icons as the project's design source shows them; with none, the title is enough.
 - **Repetition is noise.** If every cell says the same word ("Tidak tersedia" 21 times), show the exception, not the rule: draw free slots and leave unavailable ones as quiet empty space, with a legend once.
 - **Labels once.** Column headers (Pagi, Petang, Malam) appear once at the top, not in every row.
 - **Status never by colour alone.** Pair colour with a word, an icon or a fill pattern.
@@ -66,8 +66,8 @@ One or two series per chart, muted grid lines, one highlight colour for the thin
 - [ ] The job's three lines are written, and every block serves them
 - [ ] Title is the period or place, not a greeting
 - [ ] One primary action, top-right or in reach
-- [ ] Stat figures (if any) are number + label + compared change, no icons or sparklines
+- [ ] Stat figures (if any) are number + label + compared change
 - [ ] One main block takes the room; the second block is a list, not another chart
-- [ ] No identical card grid, no icon on every heading, no nested cards
+- [ ] No identical card grid of unrelated widgets
 - [ ] Repeated words and labels removed; empty states are one line plus an action
 - [ ] Judged with realistic data, at 360 px and 1440 px

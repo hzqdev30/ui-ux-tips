@@ -8,7 +8,7 @@ A shortlist of typefaces grouped by the feeling they give, plus the fonts that n
 - A design looks generic or "AI-generated" and the font is a suspect.
 - Pairing a UI font with a mono or display partner.
 
-Type scale, weights and hierarchy are in `typography`. Anti-AI-look rules (one interface family, weights 400-500, sentence case) are in `procedures/unslop/PROCEDURE.md` (pass 5, Type).
+Type scale, weights and hierarchy are in `typography`. Anti-AI-look rules (one interface family, sentence case) are in `procedures/unslop/PROCEDURE.md` (pass 5, Type).
 
 ## Picks by vibe
 

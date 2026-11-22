@@ -109,21 +109,17 @@ Note: `procedures/unreasonable-craft` mentions companion skills (`interface-craf
 General rule: the newer, stricter procedure wins on exact numbers; the older guide keeps the "why". The user's own instruction always wins over both.
 
 ### Visual
-- Shadows: prefer subtle borders; use only soft shadows when needed; one depth cue per surface.
-- Dark background: default `#121212`; `#000000` only when deliberately matching iOS.
+- Dark background: default `#121212`; `#000000` only when deliberately matching iOS. A project built on a ready template with its own dark surfaces (mitech `ui-templates.md`, `#14161c`) uses those instead, and says so in its design notes.
 - Focus: always a visible ring, in a neutral color, at least 3:1 contrast (not a brand-colored ring).
 - Neutrals and accent: tint neutrals from the product's world (blue-grey only if it fits); one accent in the chrome plus semantic colors. The 5-step accent scale is for states and tints, not extra accents.
-- Backgrounds: textures and fields only on doorway screens (hero, login, empty state), with a reason. No decorative shapes or textures on working screens.
-- Icons: icon-only buttons only for universal symbols. Navigation keeps icon + label. No icon on card titles, page titles, section headings, stat figures or labelled buttons unless the icon carries meaning (a warning, a status). Older guides that put an icon on widget headings are overruled (`dashboards-and-data`, `component-systems`). A project may decide to allow an icon beside a button label where it helps people find the action (Add, Export, Delete), not on every button; once decided and recorded, that is the rule for that project.
+- Icons: icon-only buttons only for universal symbols. Navigation keeps icon + label. Elsewhere icons follow the project's own design source (a template or house design); with none, use them where they carry meaning.
 - Navigation bars: classic icon + label is the default. Floating, circle, diamond, bubble and active-text-only variants need a stated reason.
 - Pricing: keep one clearly recommended card, size cards by content, and show a "Most popular" badge only if it is true. Promote annual billing visually, but the user selects the toggle themselves; never pre-select anything that costs money.
 
-- Containers: a card only where a group needs a boundary; never a card inside a card; page titles and context lines are not in cards.
 - Fonts: every project picks and installs a real font; the system font only by the user's decision (`font-picks`).
 
 ### Type and copy
 - Font choice: `font-picks` wins over the "Type families" table in `procedures/unslop/references/tokens.md`. Skip the fonts font-picks lists as AI-looking (Geist, Space Grotesk, Instrument Sans, Bricolage Grotesque, JetBrains Mono, Space Mono) even where tokens.md suggests them; take a free stand-in from `font-sources`.
-- Font weight: older guides suggest a heavy headline; use 400-500 (600 for rare emphasis) and build hierarchy from size and color.
 - Case: sentence case for all interface text (titles, labels, buttons, menus, dialog titles, role names). Uppercase eyebrows only when the real object is uppercase. Data the business stores uppercase is shown as data in tables and fields; statuses go through a label map, never raw (`component-systems`).
 - Type sizes: define a full scale if needed, but use at most 5 sizes on any one screen. Form inputs are 16px; body 14-16px.
 - Tone: no exclamation marks and no greeting-style hero headlines ("Welcome back!"). Friendly, specific body copy is fine. Say the plain thing; playful only when the brand voice already exists.

@@ -86,12 +86,12 @@ Each line is a rule from the skill that the baseline breaks, with the file that 
 | Purple-to-indigo gradient sidebar | No hue-to-hue gradients; one accent from the product's world (`unslop` signs) | Neutral sidebar; one buoy-orange accent for the main action and the "now" line |
 | Emoji as nav and stat icons (⛴️ 📊 💰 🔥) | Emoji become one line-icon set (`unslop` pass 3) | One line-icon set at one size and stroke |
 | "Welcome back, Faridah! 👋" + a subtitle restating it | No greeting headlines, no exclamation marks; cut subtitles that add nothing | The date as the title, with wind, tide and the duty manager beside it |
-| UPPERCASE TRACKED labels, 800-weight numbers | Sentence case; weights 400-500, hierarchy from size (`Resolved conflicts`) | Sentence case, 400-500, 4 type sizes |
+| UPPERCASE TRACKED labels | Sentence case; hierarchy from size and colour (`Resolved conflicts`) | Sentence case, 4 type sizes |
 | "+12% 🔥" with nothing to compare to | A change says what it compares to | "+3 pts vs last Wednesday" |
 | Passenger line chart + route doughnut, equal weight | One main chart showing the real job; second block is a list (`dashboards-and-data`) | A day timeline of every sailing by destination, with a list of what needs attention beside it |
 | `hover:scale-105` on cards, pinging bell dot | No scale on wide surfaces; no looping motion on things that are not live | Color change on hover only; nothing loops |
 | Main action is a gradient 🚀 button at the bottom of the alerts card | One primary action, in reach, never decorated | "Post passenger notice" top-right, one solid fill |
-| `shadow-lg` on every card | Prefer hairline borders; one depth cue per surface | 1px hairlines, no shadows |
+| `shadow-lg` on every card | Soft, consistent depth; follow the project's design source | One depth cue per surface |
 | Sidebar and header do not adapt on a phone | Recompose for small screens, 44px touch targets (`mobile-ui-and-touch`) | Sidebar becomes a scrolling top bar; the timeline opens at the current time with lane names pinned |
 
 The skilled version also adds things the baseline has no rule for: a linked hover between the timeline and the table (brushing and linking), sailings already done fading back, and tabular figures so numbers do not shift.

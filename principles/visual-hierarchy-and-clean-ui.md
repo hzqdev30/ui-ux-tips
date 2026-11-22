@@ -22,8 +22,7 @@ Rules that make an interface instantly readable: the user should know where to l
 
 - Every element needs a purpose. Remove decorative components that do not improve usability.
 - Example: one large revenue chart plus three KPI cards communicates more than ten widgets, a promo banner and a seven-icon nav.
-- Do not place decorative shapes in the background. Shapes without purpose are visual noise.
-- Reduce containers: avoid boxes inside boxes. Each container adds visual weight, so earn it.
+- Reduce containers where the project's design source does not fix them: each container adds visual weight, so earn it.
 - Do not go "super minimal" to the point of hiding meaning: add the detail that explains the process (label "Episode #1" instead of "#1"; show download percentage with a cancel control).
 
 ## 3. Whitespace and restraint
@@ -36,8 +35,6 @@ Rules that make an interface instantly readable: the user should know where to l
 
 ## 4. Borders, shadows and trends
 
-- Prefer subtle borders over shadows for cards and inputs; good shadows are hard to get right (too strong looks artificial, too soft disappears).
-- If a shadow is needed, make it soft and natural, lit from above, and do not put it on every card.
 - Avoid trends that reduce cleanliness: gradient CTAs, floating gimmick navigation. Stick to standard, solid patterns. Personality is fine, but less is more.
 
 ## 5. Visual principles
@@ -62,6 +59,6 @@ Rules that make an interface instantly readable: the user should know where to l
 - [ ] Primary CTA clearly stronger than secondary actions
 - [ ] No decorative element without a function
 - [ ] Containers kept to the minimum needed
-- [ ] Borders or soft shadows, not heavy shadows everywhere
+- [ ] Borders and shadows consistent with the project's design source
 - [ ] Consistent treatment of repeated elements
 - [ ] Reading path ends on the main action

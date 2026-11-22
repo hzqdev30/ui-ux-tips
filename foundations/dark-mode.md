@@ -13,7 +13,7 @@ General palette logic is in `color-system`. This skill covers only what changes 
 
 ## 1. Background color
 
-- Default to `#121212`. Google recommends it and warns that pure black (`#000000`) creates too high a contrast.
+- Default to `#121212` (a project on a template that ships its own dark surfaces uses those). Google recommends it and warns that pure black (`#000000`) creates too high a contrast.
 - Pure black is a valid, deliberate choice on iOS: Apple uses `#000000` in its dark mode (YouTube uses about `#222222`).
 - Recommended default for new designs: `#121212`. Use `#000000` only when matching the iOS system look on purpose.
 
