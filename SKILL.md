@@ -1,6 +1,6 @@
 ---
 name: ui-ux-tips
-description: UI/UX design rules and procedures. Use when designing, building, reviewing or polishing any interface, screen, component, animation or flow, when a UI looks AI-generated or flat, or when asked for UI/UX best practices. Covers UX laws, layout, color, type and fonts, forms, auth, states, navigation, mobile, motion, plus unslop, polish and award-level procedures.
+description: UI/UX design rules and procedures. Use when designing, building, reviewing or polishing any interface, screen, component, animation or flow, when a UI looks AI-generated or flat, or when asked for UI/UX best practices. A project's own template or design system overrides its look rules. Covers UX laws, layout, color, type and fonts, forms, auth, states, navigation, mobile, motion, plus unslop, polish and award-level procedures.
 ---
 
 # UI/UX Tips (master index)
@@ -104,6 +104,10 @@ Note: `procedures/unreasonable-craft` mentions companion skills (`interface-craf
 - Animation or interaction work: `procedures/ux-animation`, `design-principles-cheatsheet`, then `procedures/polish` for frame checks
 - Award-level site or app (only on explicit request): `procedures/unreasonable-craft`
 
+## Design source first
+
+If the project has a design source (a UI template, a design system or approved mockups), **its look wins over every look rule in this skill**: layout, shells and navigation, colour use, shadows and borders, cards, icons, weights, type scale, density, decoration, backgrounds. Use these guides for what the source does not show, and always for access and behaviour (contrast, focus, touch size, keyboard, validation timing, Undo and confirm, loading, copy). The font is the one look choice this skill still makes (`font-picks`). With no design source, every rule below applies in full.
+
 ## Resolved conflicts (apply these)
 
 General rule: the newer, stricter procedure wins on exact numbers; the older guide keeps the "why". The user's own instruction always wins over both.
@@ -111,9 +115,9 @@ General rule: the newer, stricter procedure wins on exact numbers; the older gui
 ### Visual
 - Dark background: default `#121212`; `#000000` only when deliberately matching iOS. A project built on a ready template with its own dark surfaces (mitech `ui-templates.md`, `#14161c`) uses those instead, and says so in its design notes.
 - Focus: always a visible ring, in a neutral color, at least 3:1 contrast (not a brand-colored ring).
-- Neutrals and accent: tint neutrals from the product's world (blue-grey only if it fits); one accent in the chrome plus semantic colors. The 5-step accent scale is for states and tints, not extra accents.
+- Neutrals and accent (no design source only): tint neutrals from the product's world; one accent in the chrome plus semantic colors.
 - Icons: icon-only buttons only for universal symbols. Navigation keeps icon + label. Elsewhere icons follow the project's own design source (a template or house design); with none, use them where they carry meaning.
-- Navigation bars: classic icon + label is the default. Floating, circle, diamond, bubble and active-text-only variants need a stated reason.
+- Navigation bars (no design source only): classic icon + label is the default.
 - Pricing: keep one clearly recommended card, size cards by content, and show a "Most popular" badge only if it is true. Promote annual billing visually, but the user selects the toggle themselves; never pre-select anything that costs money.
 
 - Fonts: every project picks and installs a real font; the system font only by the user's decision (`font-picks`).
@@ -121,7 +125,7 @@ General rule: the newer, stricter procedure wins on exact numbers; the older gui
 ### Type and copy
 - Font choice: `font-picks` wins over the "Type families" table in `procedures/unslop/references/tokens.md`. Skip the fonts font-picks lists as AI-looking (Geist, Space Grotesk, Instrument Sans, Bricolage Grotesque, JetBrains Mono, Space Mono) even where tokens.md suggests them; take a free stand-in from `font-sources`.
 - Case: sentence case for all interface text (titles, labels, buttons, menus, dialog titles, role names). Uppercase eyebrows only when the real object is uppercase. Data the business stores uppercase is shown as data in tables and fields; statuses go through a label map, never raw (`component-systems`).
-- Type sizes: define a full scale if needed, but use at most 5 sizes on any one screen. Form inputs are 16px; body 14-16px.
+- Type sizes: form inputs are 16px on phones (browsers zoom smaller ones). The rest of the scale follows the design source; with none, at most 5 sizes on a screen and body 14-16px.
 - Tone: no exclamation marks and no greeting-style hero headlines ("Welcome back!"). Friendly, specific body copy is fine. Say the plain thing; playful only when the brand voice already exists.
 - Success feedback: a check or short plain message ("Saved"), not "Looks good!" or "Saved successfully!".
 - Empty states: keep headline and CTA. Add sub-copy only if it adds information; use an illustration only if it was drawn for this product.

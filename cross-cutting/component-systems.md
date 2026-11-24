@@ -22,8 +22,8 @@ Record each decision where the team keeps design decisions (a UI/UX document, a 
 | **Case** | Sentence case for every piece of interface text: titles, labels, buttons, menu items, dialog titles, role names | ALL-CAPS chrome shouts and reads as a legacy system |
 | **Stored uppercase data** | Data the business stores uppercase (names, codes, statuses) is shown as data, in tables and fields. Statuses are shown through a label map ("ACTIVE" becomes "Aktif"), never raw | Keeps the stored convention without letting it leak into the chrome |
 | **Containers** | As the project's design source shows them; with none, a card only where a group needs a boundary | "Everything in a bordered card with a header strip" is the default admin layout |
-| **Density** | One row height for tables (40-44 px), one for forms; 44 px touch targets | Mixed densities look unplanned |
-| **Depth** | Hairline borders or surface steps, one depth cue per surface | Shadow on every card adds noise |
+| **Density** | One row height for tables, one for forms, taken from the project's design source; with none, 40-44 px. 44 px touch targets | Mixed densities look unplanned |
+| **Depth** | As the project's design source shows it; with none, hairline borders or surface steps, one depth cue per surface | Shadow on every card adds noise |
 | **Type scale** | At most 5 sizes, weights 400 and 500 (600 rare) | Keeps every screen consistent |
 
 ## 2. Build components that make the right thing easy

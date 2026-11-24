@@ -54,7 +54,7 @@ Notes:
 - Google Fonts and Fontsource packages carry the OFL license text; keep it when self-hosting.
 - Apfel Grotezk on Fontsource has only 400 and 700, so `font-sources.css` loads all four weights from the author's GitHub repo instead.
 - GitHub-hosted fonts are pinned to a commit hash inside `font-sources.css` so the files cannot change under you.
-- Weight rule from the skill: use 400-500, 600 for rare emphasis; a single-weight font is fine for small mono text, but pick one with a real 500 for headings.
+- Weight rule from the skill: use 400-500, 600 for rare emphasis (a project built on a template uses the weights the template pages use, usually 500-700, so install a family that has them); a single-weight font is fine for small mono text, but pick one with a real 500 for headings.
 
 ## Paid originals (no free version exists)
 

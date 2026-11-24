@@ -5,6 +5,8 @@ description: "Push a working interface from fine to exceptional: hill-climb it t
 
 # Polish
 
+> **Scope.** On a screen built from a project's template or design system, run polish for states, hit areas, focus, motion and layout shift only. Do not use it to change the template's type weights, shadows, borders, icons or spacing; the template decides those.
+
 Built from Emil Kowalski's UI polish and animation skills, Josh Puckett's Interface Craft, and feedback from Charles Liu's "Removing AI Slop" series.
 
 Most work stops at level 3 of 10, because it works and it's easy to stop. The difference between fine and great is rarely the idea; it's how far the idea gets pushed. Most "something feels off" problems are one wrong note, so look, measure and name it before changing anything.

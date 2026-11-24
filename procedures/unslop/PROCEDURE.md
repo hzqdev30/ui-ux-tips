@@ -6,6 +6,8 @@ license: CC-BY-4.0
 
 # Unslop
 
+> **Scope.** This procedure is for a screen with no design source. On a screen built from a project's template or design system, do not run its look passes (type weights, shadows and borders, icons, nesting, layout); the template decides those. Run only the access checks (contrast, focus, touch size) and the copy pass.
+
 Adapted from [unslop](https://github.com/heydamir/unslop) by Damir Sokolovsky ([@heydamir](https://x.com/heydamir)), CC BY 4.0, merged with Emil Kowalski's unslop-design skill and with feedback from Charles Liu's "Removing AI Slop" series. Changes: the passes were reordered around subtraction, and the rules on backgrounds, brand icons and materials were rewritten. Keep this credit in copies.
 
 Nobody can point at the one element that makes a screen look generated. A model picks the most common option for every decision at once, and fifty median choices compound into a watermark. So fixing one element does nothing: walk the whole screen, in order.
