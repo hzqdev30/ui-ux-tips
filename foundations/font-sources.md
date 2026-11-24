@@ -23,7 +23,7 @@ For production, load only the one or two fonts you use, and self-host them (down
 
 | Font | Style | Weights | License | Official page | Download | npm package |
 |---|---|---|---|---|---|---|
-| Switzer | Swiss | 400, 500, 600 (more in the zip) | Fontshare free licence | [Fontshare](https://www.fontshare.com/fonts/switzer) | [zip](https://api.fontshare.com/v2/fonts/download/switzer) | - |
+| Switzer | Swiss | 400, 500, 600, 700, 800 (the template needs 700 and 800) | Fontshare free licence | [Fontshare](https://www.fontshare.com/fonts/switzer) | [zip](https://api.fontshare.com/v2/fonts/download/switzer) | - |
 | Satoshi | Friendly | 400, 500, 600 (more in the zip) | Fontshare free licence | [Fontshare](https://www.fontshare.com/fonts/satoshi) | [zip](https://api.fontshare.com/v2/fonts/download/satoshi) | - |
 | General Sans | Friendly | 400, 500, 600 (more in the zip) | Fontshare free licence | [Fontshare](https://www.fontshare.com/fonts/general-sans) | [zip](https://api.fontshare.com/v2/fonts/download/general-sans) | - |
 | Cabinet Grotesk | Personality | 400, 500, 600 (more in the zip) | Fontshare free licence | [Fontshare](https://www.fontshare.com/fonts/cabinet-grotesk) | [zip](https://api.fontshare.com/v2/fonts/download/cabinet-grotesk) | - |
